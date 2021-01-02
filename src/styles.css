@@ -37,23 +37,63 @@ li {
 body {
   background-color: lavender;
 }
+.nav-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.svg-logo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 90vw;
+  height: 90vh; */
+  opacity: 25%;
+  z-index: -1;
+}
+.header {
+  display: flex;
+  /* height: 100px; */
+  align-items: center;
+}
 .title {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 60px;
+  background-color: rgba(240, 255, 255, 0.548);
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  padding: 20px;
+  margin: 5px;
+}
+.nav {
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
 }
 .nav-ul {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
+.right {
+  text-align: right;
+}
 li {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: italic;
+  padding: 20px;
+  margin: 5px;
+  background-color: rgba(240, 255, 255, 0.548);
 }
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 

@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+/*Futura PT Heavy
+font-family: futura-pt, sans-serif;
+font-weight: 700;
+font-style: normal;
+/* Futura PT Heavy Oblique */
+/*font-family: futura-pt, sans-serif;
+font-weight: 700;
+font-style: italic;
+/* Futura PT Book */
+/*font-family: futura-pt, sans-serif;
+font-weight: 400;
+font-style: normal;
+/* Futura PT Book Oblique */
+/*font-family: futura-pt, sans-serif;
+font-weight: 400;
+font-style: italic;
+/* Futura PT Cond Book */
+/*font-family: futura-pt-condensed, sans-serif;
+font-weight: 400;
+font-style: normal;
+/* Futura PT Cond Bold */
+/*font-family: futura-pt-condensed, sans-serif;
+font-weight: 700;
+font-style: normal;
+*/
+html,
+h1,
+body,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: lavender;
+}
+.title {
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.nav-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+li {
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.component {
+  align-self: center;
+  background-color: lawngreen;
+  display: flex;
+  flex-direction: column;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  width: 80vw;
+}
+.footer {
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@media only screen and (min-width: 768px) {
+  .nav-ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

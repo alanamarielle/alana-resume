@@ -1,0 +1,13 @@
+<app-header></app-header>
+<nav>
+  <ul class="nav-ul">
+    <li><a (click)="navigateTo('/home')">Home</a></li>
+    <li><a (click)="navigateTo('/about')">About</a></li>
+    <li><a (click)="navigateTo('/training')">Training</a></li>
+    <li><a (click)="navigateTo('/skills')">Skills</a></li>
+    <li><a (click)="navigateTo('/projects')">Projects</a></li>
+    <li><a (click)="navigateTo('/contact')">Contact</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

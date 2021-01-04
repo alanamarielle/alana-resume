@@ -24,6 +24,7 @@ font-style: normal;
 font-weight: 700;
 font-style: normal;
 */
+
 html,
 h1,
 body,
@@ -36,60 +37,75 @@ li {
 
 body {
   background-color: lavender;
+  height: 100%;
 }
+/* header and nav */
 .nav-box {
-  position: relative;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.header {
+  position: relative;
+  width: 350px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 255, 255, 0.548);
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom: none;
+  margin: 5px;
+}
 .svg-logo {
+  width: fit-content;
   position: absolute;
-  top: 55%;
+  top: 120%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* width: 90vw;
-  height: 90vh; */
   opacity: 25%;
   z-index: -1;
-}
-.header {
-  display: flex;
-  /* height: 100px; */
-  align-items: center;
 }
 .title {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 60px;
-  background-color: rgba(240, 255, 255, 0.548);
-  border-top-left-radius: 110px;
-  border-top-right-radius: 110px;
-  padding: 20px;
+  font-size: 55px;
   margin: 5px;
+  padding-top: 30px;
 }
 .nav {
-  height: max-content;
-  width: 100vw;
+  width: 360px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
 .nav-ul {
   list-style: none;
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 .right {
   text-align: right;
 }
-li {
+.nav-ul li {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: italic;
-  padding: 20px;
   margin: 5px;
   background-color: rgba(240, 255, 255, 0.548);
+}
+.nav-ul a {
+  display: block;
+  height: max-content;
+  padding: 20px;
+}
+.nav-ul li:active {
+  background-color: rgba(240, 255, 255, 1);
 }
 .container {
   display: flex;
@@ -99,14 +115,16 @@ li {
 
 .component {
   align-self: center;
-  background-color: lawngreen;
+  background-color: white;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
   font-family: futura-pt, sans-serif;
   font-weight: 400;
   font-style: normal;
   height: 100vh;
-  width: 80vw;
+  width: 90vw;
+  z-index: 10;
 }
 .footer {
   font-family: futura-pt-condensed, sans-serif;
@@ -114,8 +132,43 @@ li {
   font-style: normal;
 }
 @media only screen and (min-width: 768px) {
-  .nav-ul {
+  .nav-box {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  .header {
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+  }
+  .svg-logo {
+    opacity: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .title {
+    font-size: 70px;
+    padding-top: 0;
+  }
+  .nav {
+    height: 400px;
+  }
+  .nav-ul {
+    text-align: center;
+    justify-content: space-evenly;
+  }
+  .nav-ul a {
+    padding: 50px;
+  }
+  .nav-ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+  }
+  .nav-ul li:hover {
+    background-color: rgba(240, 255, 255, 1);
   }
 }

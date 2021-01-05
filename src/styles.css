@@ -1,67 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
-/*Futura PT Heavy
-font-family: futura-pt, sans-serif;
-font-weight: 700;
-font-style: normal;
-/* Futura PT Heavy Oblique */
-/*font-family: futura-pt, sans-serif;
-font-weight: 700;
-font-style: italic;
-/* Futura PT Book */
-/*font-family: futura-pt, sans-serif;
-font-weight: 400;
-font-style: normal;
-/* Futura PT Book Oblique */
-/*font-family: futura-pt, sans-serif;
-font-weight: 400;
-font-style: italic;
-/* Futura PT Cond Book */
-/*font-family: futura-pt-condensed, sans-serif;
-font-weight: 400;
-font-style: normal;
-/* Futura PT Cond Bold */
-/*font-family: futura-pt-condensed, sans-serif;
-font-weight: 700;
-font-style: normal;
-*/
-
 html,
-h1,
+/* h1,
+h2,
+h3,
+h4, */
 body,
 p,
 ul,
-li {
+li, figure, section {
   padding: 0;
   margin: 0;
 }
-
 body {
   background-color: lavender;
   height: 100%;
+  /* overflow: hidden; */
 }
-/* header and nav */
 .nav-box {
-  width: 100vw;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .header {
   position: relative;
-  width: 350px;
-  height: 175px;
+  width: 100vw;
+  height: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(240, 255, 255, 0.548);
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
+  border-top-left-radius: 200vw;
+  border-top-right-radius: 200vw;
   border-bottom: none;
-  margin: 5px;
+  margin: 15px 25px 5px 25px;
 }
 .svg-logo {
-  width: fit-content;
+  max-width: 100%;
   position: absolute;
   top: 120%;
   left: 50%;
@@ -73,12 +47,12 @@ body {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 55px;
+  font-size: largest;
   margin: 5px;
   padding-top: 30px;
 }
 .nav {
-  width: 360px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -118,19 +92,109 @@ body {
   background-color: white;
   border: 2px solid black;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   font-family: futura-pt, sans-serif;
   font-weight: 400;
   font-style: normal;
-  height: 100vh;
-  width: 90vw;
+  height: 100%;
+  width: 95vw;
   z-index: 10;
 }
+
 .footer {
   font-family: futura-pt-condensed, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+@media only screen and (min-width: 350px) {
+  .header {
+    position: relative;
+    width: 350px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 255, 255, 0.548);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom: none;
+    margin: 15px 15px 5px 15px;
+  }
+
+  .svg-logo {
+    /* width: max-content; */
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 25%;
+    z-index: -1;
+  }
+  .title {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: largest;
+    margin: 5px;
+    padding-top: 30px;
+  }
+  .nav {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .right {
+    text-align: right;
+  }
+  .nav-ul li {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    margin: 5px;
+    background-color: rgba(240, 255, 255, 0.548);
+  }
+  .nav-ul a {
+    display: block;
+    height: max-content;
+    padding: 20px;
+  }
+  .nav-ul li:active {
+    background-color: rgba(240, 255, 255, 1);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .component {
+    align-self: center;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+    width: 90vw;
+    z-index: 10;
+  }
+  .footer {
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .nav-box {
     flex-direction: row;
